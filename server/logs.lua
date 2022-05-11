@@ -11,26 +11,26 @@ local Webhooks = {
     ['trunk'] = '',
     ['stash'] = '',
     ['glovebox'] = '',
-    ['banking'] = '',
+    ['banking'] = 'https://discord.com/api/webhooks/968163895808253963/P2YDAUcf3wODI2iCmBdUs8a-gOPvUPSA7yi-5zocB9HMPFo8gFpMAiGekxV3GUOhg860',
     ['vehicleshop'] = '',
     ['vehicleupgrades'] = '',
     ['shops'] = '',
     ['dealers'] = '',
-    ['storerobbery'] = '',
+    ['storerobbery'] = 'https://discord.com/api/webhooks/968151805898915911/7EyQvOQnlOxrLOeDhuWd2kW0N3487aiAEvxRBwD-h0EU0GOsRlthzIV-NikrurkuLu8c',
     ['bankrobbery'] = '',
     ['powerplants'] = '',
     ['death'] = '',
     ['joinleave'] = '',
     ['ooc'] = '',
-    ['report'] = '',
+    ['report'] = 'https://discord.com/api/webhooks/968152225878782002/bqsYhDBBVNLeWM4xKsKZFQWxQanWYxUxkk3P5YWPuJw2CKvBHKcuHmfh9GqSsF1gUUvK',
     ['me'] = '',
     ['pmelding'] = '',
     ['112'] = '',
     ['bans'] = '',
-    ['anticheat'] = '',
+    ['anticheat'] = 'https://discord.com/api/webhooks/968152041623027772/lW2yk5j_reeBpVzNoj_e20IN3clXpOGCOu1E4jZ2kfkMqJfyyd_uac2F3GJAryN6vD95',
     ['weather'] = '',
     ['moneysafes'] = '',
-    ['bennys'] = '',
+    ['bennys'] = 'https://discord.com/api/webhooks/968163794343850044/tnz31aTjPzYSUwKeuM-OwcjGbUByatHaioVfub1LFGiDHkKIBSQ6uJfK98L_ImBJ9iuu',
     ['bossmenu'] = '',
     ['robbery'] = '',
     ['casino'] = '',
@@ -65,15 +65,15 @@ RegisterNetEvent('qb-log:server:CreateLog', function(name, title, color, message
             },
             ['description'] = message,
             ['author'] = {
-                ['name'] = 'QBCore Logs',
-                ['icon_url'] = 'https://media.discordapp.net/attachments/870094209783308299/870104331142189126/Logo_-_Display_Picture_-_Stylized_-_Red.png?width=670&height=670',
+                ['name'] = 'Venray logs',
+                ['icon_url'] = 'https://cdn.discordapp.com/attachments/938084763636477972/965922511000846346/LogoVenray.png',
             },
         }
     }
-    PerformHttpRequest(webHook, function(err, text, headers) end, 'POST', json.encode({ username = 'QB Logs', embeds = embedData}), { ['Content-Type'] = 'application/json' })
+    PerformHttpRequest(webHook, function(err, text, headers) end, 'POST', json.encode({ username = 'Venray logs', embeds = embedData}), { ['Content-Type'] = 'application/json' })
     Citizen.Wait(100)
     if tag then
-        PerformHttpRequest(webHook, function(err, text, headers) end, 'POST', json.encode({ username = 'QB Logs', content = '@everyone'}), { ['Content-Type'] = 'application/json' })
+        PerformHttpRequest(webHook, function(err, text, headers) end, 'POST', json.encode({ username = 'Venray logs', content = '@everyone'}), { ['Content-Type'] = 'application/json' })
     end
 end)
 
